@@ -1,5 +1,5 @@
 # practice_for_Sam
-Build a Simple map service with python (Flask, sqlite) and Openlayers.
+Stemp by step, build a Simple map service with python (Flask, sqlite) and Openlayers.
 
 # 2021_03_15
 1. Practice to use Flask as an API server.
