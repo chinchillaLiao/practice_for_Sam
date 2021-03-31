@@ -27,11 +27,11 @@ xhttp.onreadystatechange = function(){
 					response_town_polygon = JSON.parse(this.responseText);
 					var feature = new ol.format.GeoJSON().readFeature(response_town_polygon);
 					feature.getGeometry().transform('EPSG:4326', 'EPSG:3857')
-					#console.log(map.getLayers())
+
 					var vectorSource = map.getLayers().array_[1].getSource()
 					vectorSource.clear();
 					vectorSource.addFeature(feature);
-					#console.log(vectorSource)
+
 
 					
 				}else if(this.readyState==4 && this.status == 500){
