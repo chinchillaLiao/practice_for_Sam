@@ -1,5 +1,5 @@
 # practice_for_Sam
-Practice for Sam
+Stemp by step, build a simple map service with python (Flask, sqlite) and Openlayers.
 
 # 2021_03_15
 1. Practice to use Flask as an API server.
@@ -11,3 +11,9 @@ Practice for Sam
 2. Create a table to store town features.
 3. Create a Flask API server to retrieve a town feature and answer HTTP GET request.
 4. Your job: Repeat the step above with a little adjustment to make town menu works.  
+
+# 2021_03_24
+1. Create a Flask app and show a free map with openlayers (Javascript pacakge).
+2. Display coordinates of the mouse in EPSG:4326.
+3. Display zoom level of the map.
+4. Your job: Display whatever free map you want to use.
