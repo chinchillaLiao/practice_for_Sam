@@ -12,8 +12,6 @@ var map = new ol.Map({
   }),
 });
 
-
-
 // 底圖: 國土繪測中心
 var layer_nlsc = new ol.layer.Tile({
   source: new ol.source.XYZ({
@@ -39,8 +37,37 @@ map.addLayer(layer_nlsc);
 map.addControl(mousePositionControl);
 
 
+var style_Polygon = new ol.style.Style({
+    stroke: new ol.style.Stroke({
+      color: 'blue',
+      lineDash: [4],
+      width: 3,
+    }),
+    fill: new ol.style.Fill({
+      color: 'rgba(0, 0, 255, 0.1)',
+    }),
+  });
+  
+vectorSource = new ol.source.Vector();
+
+vectorLayer = new ol.layer.Vector({
+	source:vectorSource,
+	style:style_Polygon
+})
+
+map.addLayer(vectorLayer);
+
 map.on('rendercomplete',function(e) {
   var zoomLevel = map.getView().getZoom();
   document.getElementById('zoomlv').innerHTML = zoomLevel;
 })
+
+
+
+
+
+
+
+
+
 
