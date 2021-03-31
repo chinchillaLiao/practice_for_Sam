@@ -44,13 +44,13 @@ var style_Polygon = new ol.style.Style({
       width: 3,
     }),
     fill: new ol.style.Fill({
-      color: 'rgba(0, 0, 255, 0.1)',
+      color: 'rgba(0, 0, 255, 1)',
     }),
   });
   
-vectorSource = new ol.source.Vector();
+var vectorSource = new ol.source.Vector();
 
-vectorLayer = new ol.layer.Vector({
+var vectorLayer = new ol.layer.Vector({
 	source:vectorSource,
 	style:style_Polygon
 })
@@ -62,7 +62,7 @@ map.on('rendercomplete',function(e) {
   document.getElementById('zoomlv').innerHTML = zoomLevel;
 })
 
-
+export default map;
 
 
 
